@@ -1,5 +1,5 @@
-def Greet(name) {
-    echo "Hello ${name}"
+def Greet(name,msg) {
+    echo "Hello ${name} ${msg}"
 }
 
 
@@ -13,7 +13,7 @@ pipeline {
         stage('Function test') {
             steps {
                 echo 'Call function..'
-                Greet('Technological Death')
+                Greet('Technological Death', 'Amiga')
             }
         }
     }
